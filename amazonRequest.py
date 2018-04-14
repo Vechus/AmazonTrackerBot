@@ -2,13 +2,13 @@ import requests
 import logging
 from bs4 import BeautifulSoup
 
-def requestPriceUrl(url):
+def requestPriceUrl(chat_id, url):
     r = requests.get(url)
     soup = BeautifulSoup(r.text, "html.parser")
-    nomeProdotto = soup.find("span", {"id": "productTitle"})
-    nomeProdotto_text = " ".join(nomeProdotto.text.split())
+    product_name = soup.find("span", {"id": "productTitle"})
+    product_name_text = " ".join(product_name.text.split())
     # TODO-vechus implement all cases
-    prezzo = soup.find("span", {"id": "priceblock_saleprice"})
-    prezzo_text = prezzo.text
+    price = soup.find("span", {"id": "priceblock_saleprice"})
+    price_text = prezzo.text
 
 
