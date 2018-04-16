@@ -11,7 +11,7 @@ An Amazon tracker bot for telegram.
 ### Uso del TODO:
   Per usare il todo, bisogna prima abilitarlo nelle impostazioni di PyCharm, nelle impostazioni del progetto, e abilitare le due spunte nella sezione TODO.
   Uso canonico del TODO: 
-  ' # TODO-{nome} {messaggio} '
+  ` # TODO-{nome} {messaggio} `
   Esempio:
-  ' # TODO-vechus fix bugs '
+  ` # TODO-vechus fix bugs `
   Anticipo che io non fixo niente.
