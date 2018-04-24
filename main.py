@@ -1,7 +1,11 @@
 import telebot
 import logging
-import simplejson
+import sqlite3 as lite
 import amazonRequest
+
+
+database = lite.connect('devdatabase.db')
+cur = database.cursor()
 
 FEEDBACK = 12
 logging.addLevelName(FEEDBACK, 'FEEDBACK')
@@ -25,12 +29,11 @@ def testReq(message):
     if message.text.find('amazon.it', 0) == -1:
         bot.reply_to(message, "You didn't input an amazon.it url... Stupid fucking tester.")
     else:
-        product_found = {}
-        product_found = amazonRequest.requestPriceUrl(str(message.chat.username), message.text)
-        try:
-            bot.reply_to(message, "Found a product, it is: " + product_found[0] + ", price: " + product_found[1] + "€.")
-        except:
-            bot.reply_to(message, "The product has been found, but the dev is too lazy to implement new cases, I'm sorry. but hey, at least I found it, here it is!")
+        product_found = amazonRequest.requestPriceUrl(str(message.chat.username), message.text, cur)
+        if product_found:
+            bot.reply_to(message, """Found a product, it's in "crypted" database""")
+        else:
+            bot.reply_to(message, "The product has been found, but the dev is too lazy to implement new cases, I'm sorry. ")
 
 
 ## Not implemented / not a command / bugged
