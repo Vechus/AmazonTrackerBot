@@ -46,6 +46,8 @@ def echo_all(message):
     bot.reply_to(message, message.text + " is not a command.")
 
 
+
+
 # START BOT
 print("Bot started.")
 bot.polling()
