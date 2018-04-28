@@ -1,21 +1,21 @@
 import requests
-import logging
+#import logging
 from bs4 import BeautifulSoup
 import sqlite3 as lite
 
 #import sys
 
 
-USERREQUEST = 25
-logging.addLevelName(USERREQUEST, 'USER REQUEST: ')
-logging.basicConfig(filename='testing.log', filemode='w+', level=logging.DEBUG)
+#USERREQUEST = 25
+#logging.addLevelName(USERREQUEST, 'USER REQUEST: ')
+#logging.basicConfig(filename='testing.log', filemode='w+', level=logging.DEBUG)
 
 def requestPriceUrl(user, url, cur):
     r = requests.get(url.split("/test ")[1])
     soup = BeautifulSoup(r.text, "html.parser")
     product_name = soup.find("span", {"id": "productTitle"})
     product_name_text = " ".join(product_name.text.split())
-    logging.log(USERREQUEST, "from: " + user + ": product: " + product_name_text)
+    #logging.log(USERREQUEST, "from: " + user + ": product: " + product_name_text)
 
     # TODO-vechus implement all cases
     # saleprice case
