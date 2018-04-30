@@ -2,11 +2,11 @@
 An Amazon tracker bot for telegram.
 
 ## COMUNICAZIONE DI SERVIZIO
-	**Si passa a AmazonAPI** (test) per le comunicazioni con Amazon:
-	usa Bottlenose, lxml e dateutil (che dovrebbe essere preinstallato).
-	### Installazione:
-		'pip install python-amazon-simple-product-api'
-		dovrebbe anche installare le dipendenze.
+__Si passa a AmazonAPI__ (SOLO IN BRANCH **dev**) per le comunicazioni con Amazon:
+usa Bottlenose, lxml e dateutil (che dovrebbe essere preinstallato).
+### Installazione:
+		pip install python-amazon-simple-product-api
+dovrebbe anche installare le dipendenze.
 
 ## Regole per push, commit:
   1. Solo push in branch **dev**. Nessuna push in master, deve essere gestita solo da @Vechus.
