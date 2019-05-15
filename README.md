@@ -15,3 +15,6 @@ An Amazon tracker bot for telegram.
   Esempio:
   ` # TODO-vechus fix bugs `
   Anticipo che io non fixo niente.
+
+## Turi fa commit a caso
+Comunque se vuoi fare un trackbot, dovresti usare le api rubate dal app mobile, siccome permettono di vedere molte più cose, come le offerte lampo.
