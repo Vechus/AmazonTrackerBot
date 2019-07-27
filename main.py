@@ -11,7 +11,7 @@ cur = database.cursor()
 # logging.addLevelName(FEEDBACK, 'FEEDBACK')
 # logging.basicConfig(filename='testing.log', filemode='w+', level=logging.DEBUG)
 
-bot = telebot.TeleBot("577135328:AAEBSQdPZE3UO4aUqt_pAWrrbBaGTST1DRM")
+bot = telebot.TeleBot("apikey")
 print("Starting...")
 
 
